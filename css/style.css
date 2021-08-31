@@ -1,0 +1,562 @@
+
+html{scroll-behavior:smooth;font-family: 'Times New Roman', Times, serif;}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;    
+}
+
+.header{
+    position: fixed;
+    right: 0;
+    top: 0;
+    left: 0;  
+    padding: 0px 22px;
+    background-color: #2a2a2cc9;
+    z-index: 1;
+}
+
+.cover-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.header-control-list{
+    display: flex;
+    /* justify-content: space-between; */
+    list-style: none    ;
+}
+
+.header-control-list > a{
+    text-decoration: none;
+}
+
+.header-control-list-item{
+    padding: 12px 9px;
+    /* background-color: red; */
+    height: 100%;
+    letter-spacing: 2.2px;
+    color: rgba(255, 255, 255, 0.856);
+    cursor: pointer;
+}
+
+.header-more-dropdown{
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+.header-more-dropdown-list-item{
+    position: absolute;
+    width: 174%;
+    background-color: rgba(255, 255, 255, 0.89);
+    right: 0;
+    top: 100%;
+    /* height: 10px; */
+    box-shadow: 0 0 10px 6px solid #ccc;
+}
+.header-more-dropdown-list-item-ul{
+    list-style: none;
+    display: none;
+    border-radius: 8px ;
+  
+}
+
+#more-checkbox:checked ~ .header-more-dropdown-list-item> .header-more-dropdown-list-item-ul {
+    display: block;
+}   
+
+.header-more-dropdown-list-item-li{
+    padding: 3px 15px;
+    color: black;
+    letter-spacing: 4px;
+}
+
+.header-more-dropdown-list-item-li:hover{
+    background-color: red;
+}
+
+.header-more-dropdown-list-item-li:first-child{
+    margin-top: 5px;
+}
+
+.header-more-dropdown-list-item-li:last-child{
+    margin-bottom: 5px;
+}
+/* Slide */
+.cover-slide{
+    width: 100%;
+    height: 100vh;
+    background-image: url('https://www.w3schools.com/bootstrap/ny.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    
+}
+
+.cover-slide-content{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.747);
+}
+.cover-slide-content-text{
+    position: absolute;
+    bottom: 7%;
+    left: 0;
+    right: 0;
+    /* transform: translateX(-15%); */
+    text-align: center;
+    
+
+}
+.cover-slide-content-text-where{
+    color: white;
+    letter-spacing: .7rem;
+    margin-bottom: 20px;
+   
+}
+.cover-slide-content-text-desc{
+    color: white;
+    margin: 10px 0;
+    font-size: 18px;
+}
+.cover-slide-content-control{
+    /* display: flex; */
+    /* justify-content: space-between; */
+    color: white !important;
+    text-align: center;
+
+
+}
+/* intro the band */
+.cover-intro-theband{
+    padding: 85px 0;
+}
+.Band-Name{
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 6px;
+    margin: 15px 0;
+}
+.Band-slogan{
+    text-align: center;
+    font-style: italic;
+    color: grey;
+    font-size: 18px;
+    margin: 15px 0;
+}
+.Band-desc{
+   text-align: center;
+   padding: 0 20%;
+   color: grey;
+   font-size: 17px;
+}
+.Band-character{
+    /* text-align: center; */
+    padding: 0 20%;
+    margin-top: 40px;
+
+}
+.cover-band-character{
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+}
+.character-desc{
+    text-align: center;
+    opacity: .6;
+    width: 200px;
+}
+.character-Name{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.cover-content-character{
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+    animation: characterdisplay 1s  ;
+}
+
+@keyframes characterdisplay {
+    0%{
+        display: none;
+    }
+    100%{
+        display: block;
+    }
+}
+.character-img{
+    /* width: 200px; */
+    border-radius: 50%;
+    width: 100%;
+    cursor: pointer;
+}
+.character-img:hover{
+    box-shadow: 0 0 40px 10px grey;
+    /* border: 3px solid grey; */
+}
+
+#character-click1:checked ~ .cover-content-character{
+    display: block;
+}
+#character-click2:checked ~ .cover-content-character{
+    display: block;
+}
+#character-click3:checked ~ .cover-content-character{
+    display: block;
+}
+
+/* Tour date */
+.cover-tour-date {
+    background-color: #2d2d30;
+    /* height: 200px; */
+    padding: 7% 14%;
+}
+.tour-ticket{
+    background-color: white;
+
+}
+.tour-quote{
+    text-align: center;
+    font-style: italic;
+    color: #bdbdbd;
+    font-size: 16.8px;
+
+}
+.ticket-month{
+     display: flex;
+     align-items: center;
+     padding: 14px 20px;
+
+     
+}
+.ticket-status{
+    color:  white;
+    padding: .5px 5.8px ;
+    background-color:#d9534f;
+    border-radius: 4px;
+    margin-left: 4px;
+    line-height: 100%;
+}
+.month-name{
+    color: #bdbdbd;
+
+}
+.ticket-month:nth-child(2)
+{
+    border-top: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
+
+}
+.ticket-month:last-child
+{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.ticket-rest{
+    border-radius: 40px;
+    color: white;
+    font-weight: 900;
+    padding: 1px 6px; 
+    background-color: #777777;
+    position: relative;
+    top: -3px;
+}
+.tour-where{
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-between;
+
+}
+.tour-image{
+    /* background-image: url('https://www.w3schools.com/bootstrap/paris.jpg'); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 240px;
+    
+}
+.cover-tour-where{
+    width: 31.3%;
+    text-align: center;
+    
+}
+.cover-tour-where-content{
+    background: rgb(255, 255, 255);
+    padding: 10px 0;
+    
+}
+.tour-name{
+    margin: 12px 0;
+    color: rgba(0, 0, 0, 0.842);
+    font-weight: bolder;
+    font-style: italic;
+}
+.tour-day{
+    font-style: italic;
+    color: grey;
+    margin: 12px 0;
+}
+.ticket-order{
+    padding: 10px 26px;
+    font-size: 14px;
+    background: rgba(0, 0, 0, 0.842);
+    border: none;
+    color: rgba(255, 255, 255, 0.795);
+    cursor: pointer;
+    transition: all .13s;
+}
+.ticket-order:hover{
+    border: 1px solid black;
+    background: white;
+    color: black;
+}
+
+/* modal */
+.modal{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.418);
+}
+@keyframes modal {
+    0%{
+        top: 0px;
+    }
+    100%{
+        top: 10%;
+    }
+}
+
+@keyframes modalclose{
+    0%{
+        top: 10%;
+    }
+    100%{
+        top: 0%;
+    }
+}
+
+.modal-container{
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 50%;
+        background-color: white;
+        z-index: 20;
+        animation: modal .3s;
+    }
+
+.modal-close{
+    animation: modalclose .3s;
+}    
+.modal-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 30px;
+    background-color: #333;
+}
+.modal-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 12;
+}
+.cover-modal-header{
+    color: white !important;   
+    flex-grow: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.modal-header-title{
+    letter-spacing: 10px;
+}
+.modal-body{
+    padding: 10%  ;
+    padding-bottom: 2%;
+}
+.modal-input{
+    width: 100%;
+    height: 22px;
+    padding: 16px 0;
+    padding-left: 10px;
+    /* border: none; */
+}
+.modal-input:focus{
+    outline: none;
+    border: .5px solid #4888be  ;
+    box-shadow: 0 0 .5px  .5px  #4888be;
+
+}
+.btn-modal-pay{
+    display: block;
+     width: 100%; 
+     margin:20px 0;
+     padding: 14px 0; 
+     cursor: pointer; 
+     background-color: #2d2d30;
+     border: none;
+     color: white !important;
+     font-size: 13px;
+     transition: all .2s ;
+}
+.btn-modal-pay:hover{
+    background-color: white;
+    color: black !important;
+    border: 1px solid black;
+}
+.modal-footer{
+    border-top: 1px solid #e5e5e5;
+    display: flex;
+    justify-content: space-between;
+    padding:  3% 5%;
+    align-items: center;
+}
+/* Checkbox */
+#overlay:checked ~ .modal {
+    display: block;
+}
+/* Contact */
+.contact{
+    padding: 5% 14%;
+}
+.Contact-title{
+    text-align: center;
+    font-weight: 300 !important;
+    letter-spacing: 6px;
+    font-size: 22px;
+    margin:24px 0;
+}
+.contact-slogan{
+    text-align: center;
+    font-style: italic;
+    color: grey;
+    font-style: 17px;
+    margin: 16px 0;
+}
+
+.contact-cover{
+    display: flex;
+}
+.contact-cover-info{
+    width: 35%;
+    color: #777;
+    font-size: 17px;
+}
+.contact-cover-info p{
+    margin: 1rem 0;
+}
+.contact-cover-info i {
+    margin-right: 1.8px;
+}
+.contact-cover-form{
+    width: 65%;
+}
+.contact-cover-name-email{
+    display: flex;
+    justify-content: space-between;
+
+}
+.contact-input{
+    width: 48%;
+    border: 1px solid #ccc;
+}
+.txtComment{
+    width: 100%;
+    outline: none;
+    border: 1px solid #ccc;
+    padding:  10px ;
+    resize: none;
+    /* height: 45px; */
+}
+.txtComment:hover{
+    border: .5px solid #4888be  ;
+    box-shadow: 0 0 2px  .7px  #4888be;
+     outline: none;
+}
+.contact-cover-comment{
+    margin-top: 20px;
+}
+.btn-send{
+    float: right;
+    margin-top: 30px;
+    padding: 12px 20px  ; 
+    background-color: rgba(0, 0, 0, 0.833);
+    outline: none; 
+    color: white;
+    border: 1px solid transparent ;
+    cursor: pointer;
+    
+}
+.btn-send:hover{
+    border: 1px solid black;
+    background-color: white;
+    color: black;
+    transition: background-color 180ms linear;
+
+
+}
+.contact-blog{
+    margin-top: 40px;
+}
+.blog-user div span{
+    color: rgba(0, 0, 0, 0.541);
+    padding: 9px 8px ;
+    padding-bottom: 9px;
+    margin-left: -3px;
+    line-height: 100%;
+    cursor: pointer;
+
+}
+.blog-user div{
+    padding: 8px 0;
+}
+.blog-user div span:hover{
+    background-color: gainsboro;   
+}
+.active{
+    z-index:100;
+    border: 1px solid rgba(204, 204, 204, 0.932);
+    border-radius: 4px;
+    border-bottom: none;
+    background-color: white;
+    padding: 11px 8px !important;
+    padding-bottom: 11px !important;
+    color: rgba(0, 0, 0, 0.815) !important;
+}
+.data-blog-cover{
+    margin: 28px 0;
+    opacity: .7;
+}
+/* map */
+.map{
+    background: url('https://www.w3schools.com/bootstrap/map.jpg');
+    height: 800px;
+    width: 100%;
+}
+.footer{
+    padding: 40px 0;
+    text-align: center;
+    opacity: .7;
+    background: #000;
+}
+.active-control{
+    background: rgba(0, 0, 0, 0.1);
+}
